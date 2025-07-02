@@ -14,7 +14,7 @@
 global.release_mode=false
 
 //game properties
-    global.game_title="renex² engine"
+    global.game_title="renex² engine: rossiter fork"
     //intended room speed
     //note: player always runs at 50hz! look in player step for an explanation
     global.game_speed=50
@@ -44,15 +44,15 @@ global.release_mode=false
     global.disable_delta_time=false
     //disable the global settings repository
     //use this when you don't want the engine to remember the last game's options
-    global.disable_settings_repo=false
+    global.disable_settings_repo=true
 
 
 //difficulties
     //difficulty options:
-    add_difficulty("Medium",false,false)
-    add_difficulty("Hard",true,false)
-    add_difficulty("Very Hard",false,false)
-    add_difficulty("Impossible",false,true)
+    add_difficulty("Assist",false,false)
+    add_difficulty("Standard",true,false)
+    //add_difficulty("Very Hard",false,false)
+    //add_difficulty("Impossible",false,true)
 
     //you can replace these with bow/no bow for example, or even add more
     //there is a globalvar called "difficulty" that's automatically set for you
@@ -93,13 +93,13 @@ global.release_mode=false
     //item display on the file menu is replaced with a (x/y) counter
     global.item_number_display=false
     //item display on the file menu is replaced with a (x%) counter
-    global.item_percentage_display=false
+    global.item_percentage_display=true
     //total amount of items in your game (used for the previous two options)
     global.item_total_count=8
     //save automatically when touching saves
     global.contact_saves=false
     //press shoot to save when touching a save
-    global.press_shoot_saves=false
+    global.press_shoot_saves=true
     //let all saves work even while flipped the wrong way
     global.flip_saves=true
     //saves display the time they were first saved above them
@@ -177,7 +177,7 @@ global.release_mode=false
     //2 - pause the level music immediately
     //3 - do nothing (music keeps playing)
     //4 - music slowdown
-    global.gameover_music=0
+    global.gameover_music=4
     //game over music filename
     //must be placed in the 'sounds' folder, but it functions as music ingame
     global.death_music="m-r-tight"
@@ -185,16 +185,16 @@ global.release_mode=false
     //0 - remastered sound effect
     //1 - yuuutu engine sound effect
     //2 - yosniper engine sound effect
-    global.break_sound_effect=0
+    global.break_sound_effect=1
     //stop sound effects when changing rooms
     global.stop_sounds_on_room_change=true
     //disable automatic pan and volume
-    global.disable_autopanvol=false
+    global.disable_autopanvol=true
 
 
 //cleaner physics --- not recommended to change when making traditional needle games
     //jump from vines with the jump button
-    global.maker_vines=false
+    global.maker_vines=true
     //clean up vine physics, modelling them after Hollow Knight's walljump
     //jumps with the jump button regardless of the maker vines setting
     //vines do not work if not placed on top of a block

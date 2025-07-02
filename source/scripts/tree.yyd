@@ -3,6 +3,10 @@
 	+game options
 		|custom_options
 		|opt_template
+		|opt_autorestart
+		|opt_skipcutscenes
+		|opt_autofire
+		|opt_visualeffects
 		|opt_music_volume
 		|opt_sound_volume
 		|opt_sound_mode

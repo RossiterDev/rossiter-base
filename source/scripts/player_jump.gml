@@ -49,6 +49,9 @@ if (vvvvvv) {
             if (djump>2) {
                 repeat (5) instance_create(random_range(x-5,x+5),random_range(y+4,y+4),TripleJumpEffect)
             }
+            else if (djump>1) {
+                repeat (4) instance_create(random_range(x-5,x+5),random_range(y+4,y+4),objDJumpParticle)
+            }
             image_index=0
             trigger_broadcast(tr_playerdjump)
             coyoteTime=0

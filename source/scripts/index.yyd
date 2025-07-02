@@ -355,3 +355,7 @@ vertex_helper_poscol
 
 draw_sprite_9slice
 ps2_9slice
+opt_autorestart
+opt_visualeffects
+opt_autofire
+opt_skipcutscenes

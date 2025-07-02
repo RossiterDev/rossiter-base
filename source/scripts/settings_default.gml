@@ -7,7 +7,7 @@ settings("l+r behavior",lr_right)
 
 settings("blood",3)
 settings("filter",1)
-settings("anim",true)
+settings("anim",false)
 
 settings("makervine",true)
 settings("valign",true)
@@ -18,5 +18,11 @@ settings("stereomode",true)
 settings("screenscale",1)
 
 settings("caption visible",true)
+
+settings("autorestart",false)
+settings("autofire",false)
+settings("skipcutscenes",false)
+settings("visualeffects",true)
+
 
 input_default()

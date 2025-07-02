@@ -9,7 +9,7 @@ sel=0
 xdraw=global.width/2-276
 ydraw=132
 xsep=550
-ysep=24
+ysep=21
 
 numoptions=ds_list_size(global.optlist)
 for (i=0;i<numoptions;i+=1) {
@@ -65,7 +65,7 @@ draw_set_color(global.text_color)
 
 draw_set_halign(1)
 draw_set_font(fntOptions)
-draw_text(global.width/2,64,lang("optionsmenu"))
+draw_text(global.width/2,40,lang("optionsmenu"))
 
 for (i=0;i<numoptions;i+=1) {
     draw_set_halign(0)
@@ -75,6 +75,73 @@ for (i=0;i<numoptions;i+=1) {
 }
 
 if (!dead) draw_sprite_ext(sprite,floor(image_index),xcursor,ycursor,1,1,angle,$ffffff,1)
+
+draw_set_halign(fa_center)
+draw_set_valign(fa_middle)
+switch sel
+{
+    case 0:
+        draw_text_outline(400,100,"Adjust the volume of the background music.",c_white,c_black)
+        break;
+    case 1:
+        draw_text_outline(400,100,"Adjust the volume of the game's sound effects.",c_white,c_black)
+        break;
+    case 2:
+        draw_text_outline(400,100,"When enabled, all music and sounds#pause when the game is paused.",c_white,c_black)
+        break;
+    case 3:
+        draw_text_outline(400,100,"Set whether the game is in fullscreen or not.",c_white,c_black)
+        break;
+    case 4:
+        draw_text_outline(400,100,"If the game is windowed, set the#percent scale of the window size.",c_white,c_black)
+        break;
+    case 5:
+        draw_text_outline(400,100,"Set the screen filter used when the game#window is scaled up. Recommended is Sharp.",c_white,c_black)
+        break;
+    case 6:
+        draw_text_outline(400,100,"If the game is fullscreen, draws the normal#window caption to the screen when enabled.",c_white,c_black)
+        break;
+    case 7:
+        draw_text_outline(400,100,"Adjust how intense screenshake is. If you suffer#from epilepsy or motion sickness, set this to 0.",c_white,c_black)
+        break;
+    case 8:
+        draw_text_outline(400,100,"Adjust the Kid's behavior when both#Left and Right are held simultaneously.",c_white,c_black)
+        break;
+    case 9:
+        draw_text_outline(400,100,"If enabled, the game will automatically#reload from your last save on death.",c_white,c_black)
+        break;
+    case 10:
+        draw_text_outline(400,100,"If enabled, the Kid will automatically#shoot when the Shoot button is held down.",c_white,c_black)
+        break;
+    case 11:
+        draw_text_outline(400,100,"When disabled, certain disorienting#visual effects will be turned off.",c_white,c_black)
+        break;
+    case 12:
+        draw_text_outline(400,100,"Adjust how the player behaves#when jumping off of vines.",c_white,c_black)
+        break;
+    case 13:
+        draw_text_outline(400,100,"If enabled, the Kid's cape will turn#blue when you can't double-jump.",c_white,c_black)
+        break;
+    case 14:
+        draw_text_outline(400,100,"If enabled, all cutscenes are automatically#skipped. Not recommended for your first playthrough.",c_white,c_black)
+        break;
+    case 15:
+        draw_text_outline(400,100,"Set how much blood the Kid creates upon death.#Turn this down if the blood effects cause lag.",c_white,c_black)
+        break;
+    case 16:
+        draw_text_outline(400,100,"Set what objects the Kid's blood can collide with.",c_white,c_black)
+        break;
+    case 17:
+        draw_text_outline(400,100,"Adjust controls if you are using a keyboard.",c_white,c_black)
+        break;
+    case 18:
+        draw_text_outline(400,100,"Adjust controls if you are using a controller.",c_white,c_black)
+        break;
+    default:
+        draw_text_outline(400,100,"No option selected",c_white,c_black)
+        break;
+}
+draw_set_valign(fa_top)
 
 //button info
 draw_set_font(fntFileSmall)

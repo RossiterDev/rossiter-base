@@ -1,6 +1,7 @@
 var fixspr,dy,xs,ys;
 
 fixspr=settings("anim")
+fixspr=false
 
 if (argument0=="mask") {
     if (vflip==-1) {

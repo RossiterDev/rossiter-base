@@ -23,6 +23,21 @@ global.infocus=window_has_focus()
 if (message) message-=1
 if (message2) message2-=1
 
+//autorestart
+if instance_exists(Player) && settings("autorestart")
+{
+    if Player.dead && !global.pause
+    {
+        restartTimer += 1
+        if restartTimer >= 25
+        {
+            restartTimer = 0
+            savedata_load()
+        }
+    }
+    else if !global.pause restartTimer = 0
+}
+
 //music fade
 if (music_fade<1) {
     music_fade+=1/music_fade_time

@@ -29,6 +29,9 @@ mm_ground_fric=0.2
 mm_air_fric=0
 mm_ground_accel=0.3
 mm_air_accel=0.2
+
+//autofire stuff
+autofireCooldown = 5
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
@@ -392,8 +395,9 @@ if (!frozen) {
     if (!cutscene) {
         //player actions
         
-        if (key_shoot(vi_pressed) || (key_shoot() && global.debug_autofire_counter==1)) {
+        if (key_shoot(vi_pressed) || (key_shoot() && settings("autofire") && autofireCooldown <= 0)) {
             player_shoot()
+            autofireCooldown = 5
         }
         if (key_jump(vi_released_early) && !global.disable_cancels) {
             //this is used to cactus
@@ -414,6 +418,7 @@ if (!frozen) {
             kill_player()
         }
     }
+    if autofireCooldown > 0 autofireCooldown -= 1
 
     //update coyote time
     if (coyoteTime!=0) {

@@ -261,6 +261,7 @@
 		|StarDoubleJump
 		|StarTripleJump
 		|TripleJumpEffect
+		|objDJumpParticle
 		|LowGravField
 		|HighGravField
 		|LowSpeedField

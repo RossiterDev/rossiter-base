@@ -84,6 +84,7 @@
 		|sprPlayerFallC
 		|sprPlayerFallOldC
 		|sprPlayerIdleC
+	|sprDJumpParticle
 +Cherries
 	|sprCherry
 	|sprCherryOrange
